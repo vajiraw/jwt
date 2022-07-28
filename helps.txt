@@ -1,0 +1,38 @@
+JWTONE  project
+This project is deveoped to user registration and login using Jason Web Tokens(JWT).
+
+This project uses nodejs, express,jsonwebtoken,mongoose
+
+postman json request
+
+
+http://localhost:3000/signup
+raw request and type is json
+
+{
+	"first_name" : "wkeind",
+	"last_name" : "wijay",
+	"email" : "wef@gmail.com",
+	"password" : "zxcasd"
+}
+
+response ::
+{
+    "first_name": "wkeind",
+    "last_name": "wijay",
+    "email": "wef@gmail.com",
+    "password": "$2a$10$20he2o0fmezu/tZ1t8WY0e6bPKRvRBKZSJAEaf05Pbe8Q7W2UVkiW",
+    "_id": "62e22d85eead2523949d3897",
+    "__v": 0,
+    "token": "InWF0IjoxNjU4OTg5OTU3LCJleHAiOjE2NTg5OTcxNTd9.2IYk64ElToYkYof157I5kT6QSLwF0RuAZrd0YTPmdE0"
+}
+
+
+with token request is:
+http://localhost:3000/welcome
+
+{
+	"token": "JhbGciOiJIUzI1jU4OTg5OTU3LCJleHAiOjE2NTg5OTcxNTd9.2IYk64ElToYkYof157I5kT6QSLwF0RuAZrd0YTPmdE0"
+}
+
+
